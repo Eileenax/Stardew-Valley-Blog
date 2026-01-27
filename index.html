@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stardew Valley</title>
+    <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -26,7 +27,6 @@
         min-height: 100vh;
         font-family: "VT323", monospace;
       }
-
       .div-container {
         /* contenedor principal del blog */
         display: flex;
@@ -50,7 +50,9 @@
         /* título principal con text shadow para que parezca el logo original*/
         font-size: 80px;
         color: #b35900;
-        text-shadow: 2px 2px 0px #f7c18e, 4px 4px 0px #5c2d1b;
+        text-shadow:
+          2px 2px 0px #f7c18e,
+          4px 4px 0px #5c2d1b;
         text-align: center;
       }
 
@@ -214,6 +216,28 @@
       .boton-wiki:hover {
         background-color: #b35900;
         transform: scale(1.1); /*efecto de pulso al pasar el mouse */
+      }
+
+      @media (max-width: 480px) {
+        /* diseño responsivo para telefonos */
+        .div-container {
+          width: 80%;
+          flex-direction: column;
+        }
+        .contenedor-personajes {
+          padding: 0px;
+        }
+        .seccion-info {
+          flex-direction: column;
+          padding: 10px;
+          text-align: center;
+        }
+        .imagen-lateral img {
+          width: 100%;
+        }
+        .tarjeta {
+          width: 100px;
+        }
       }
     </style>
   </head>
