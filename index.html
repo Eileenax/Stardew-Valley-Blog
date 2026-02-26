@@ -4,242 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stardew Valley</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
       rel="stylesheet"
     />
-    <style>
-      * {
-        margin: 0; /*para que no haya ningun márgen raro*/
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body,
-      html {
-        background-image: url("imagenes/wp6659276-stardew-valley-desktop-wallpapers.jpg");
-        background-size: cover;
-        background-attachment: fixed; /* 'fixed' para que mi fondo no se mueva para abajo y quede estático */
-        width: 100%;
-        min-height: 100vh;
-        font-family: "VT323", monospace;
-      }
-      .div-container {
-        /* contenedor principal del blog */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 50%;
-        margin: 40px auto;
-        padding: 40px 20px;
-        background-color: rgba(
-          244,
-          236,
-          228,
-          0.9
-        ); /* el color semitransparente para que se vea un poco mi fondo*/
-        border: 6px double #8b5e3c; /* bordecito doble para que parezca un cuadro*/
-        color: #5c2d1b;
-        min-height: 100vh;
-      }
-
-      h1 {
-        /* título principal con text shadow para que parezca el logo original*/
-        font-size: 80px;
-        color: #b35900;
-        text-shadow:
-          2px 2px 0px #f7c18e,
-          4px 4px 0px #5c2d1b;
-        text-align: center;
-      }
-
-      h2.subtitulo {
-        font-size: 30px;
-        color: #4b3022;
-        margin-bottom: 20px;
-        text-align: center;
-      }
-
-      /* información principal y la imagen al lado utilizando una flexbox */
-      .seccion-info {
-        display: flex;
-        align-items: center;
-        gap: 30px;
-        margin-top: 20px;
-        padding: 20px 40px;
-      }
-
-      .imagen-lateral img {
-        width: 320px;
-        border: 3px solid #8b5e3c;
-        border-radius: 8px;
-        box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
-      }
-
-      .texto-info {
-        text-align: left;
-        color: #4b3022;
-        font-size: 24px;
-      }
-
-      .texto-info h3 {
-        color: #b35900;
-        font-size: 35px;
-        margin-bottom: 10px;
-      }
-
-      .separador {
-        /* línea marrón para separar secciones */
-        border: 0;
-        height: 3px;
-        background: #8b5e3c;
-        margin: 40px auto;
-        width: 90%;
-        opacity: 0.5;
-      }
-
-      .titulo-personajes {
-        color: #b35900;
-        font-size: 45px;
-        margin-bottom: 20px;
-      }
-
-      .contenedor-personajes {
-        /*galeria de personajes, usando flex wrap para que pasen de fila automático */
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-        width: 100%;
-        padding: 20px;
-      }
-
-      .tarjeta {
-        /* diseño de cada tarjetita de cada personaje */
-        background-color: rgba(139, 69, 19, 0.08);
-        border: 2px solid #8b5e3c;
-        border-radius: 8px;
-        padding: 10px;
-        width: 130px;
-        text-align: center;
-        transition: all 0.3s ease; /* transición suave para el efecto hover */
-        cursor: pointer;
-      }
-
-      .tarjeta:hover {
-        /*efecto al pasar el mouse */
-        transform: translateY(-10px); /* se levanta un poco */
-        background-color: #fff1ad; /* color de fondo amarillito cuando se levanta la tarjeta */
-        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
-        border-color: #b35900;
-      }
-
-      .tarjeta img {
-        /* 'pixelated': evita que la imagen al agrandarse se vea borrosa*/
-        width: 80px;
-        image-rendering: pixelated;
-      }
-
-      .tarjeta p {
-        margin-top: 8px;
-        color: #4b3022;
-        font-size: 20px;
-        font-weight: bold;
-      }
-
-      .tarjeta:hover p {
-        color: #b35900; /* el color del nombre cuando pasa el mouse por encima  */
-      }
-
-      .pie-de-pagina {
-        /* estilo del footer */
-        margin-top: 30px;
-        padding-bottom: 20px;
-        width: 100%;
-        text-align: center;
-      }
-
-      .mi-perfil {
-        /*mi enlace a github*/
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 30px;
-      }
-
-      .avatar-autor {
-        /* imagen de mi personaje*/
-        width: 80px;
-        height: auto;
-        image-rendering: pixelated;
-        border: 2px solid #8b5e3c;
-        border-radius: 50%;
-        background-color: rgba(255, 255, 255, 0.3);
-        padding: 5px;
-      }
-
-      .mi-perfil a {
-        color: #b35900;
-        text-decoration: none; /*le quito el subrayado azul feo q trae por defecto*/
-        font-weight: bold; /* negrita*/
-        border-bottom: 2px solid transparent; /*crea un borde invisible debajo del nombre*/
-        transition: 0.3s; /* que la transición del color y el borde sea de 0.3seg, osea, suave*/
-      }
-
-      .mi-perfil a:hover {
-        /*linea q aparece debajo de mi nombre al pasar el mouse*/
-        border-bottom: 2px solid #b35900;
-      }
-
-      .wiki-info p {
-        font-size: 24px;
-        margin-bottom: 15px;
-      }
-
-      .boton-wiki {
-        /* botón para ir a la wiki*/
-        display: inline-block;
-        background-color: #5c2d1b;
-        color: #f7c18e !important;
-        padding: 10px 20px;
-        text-decoration: none;
-        border-radius: 5px;
-        border: 2px solid #8b5e3c;
-        font-size: 20px;
-        transition: 0.3s;
-      }
-
-      .boton-wiki:hover {
-        background-color: #b35900;
-        transform: scale(1.1); /*efecto de pulso al pasar el mouse */
-      }
-
-      @media (max-width: 480px) {
-        /* diseño responsivo para telefonos */
-        .div-container {
-          width: 80%;
-          flex-direction: column;
-        }
-        .contenedor-personajes {
-          padding: 0px;
-        }
-        .seccion-info {
-          flex-direction: column;
-          padding: 10px;
-          text-align: center;
-        }
-        .imagen-lateral img {
-          width: 100%;
-        }
-        .tarjeta {
-          width: 100px;
-        }
-      }
-    </style>
   </head>
   <body>
     <div class="div-container">
@@ -248,14 +19,14 @@
         Donde trabajas más en tu granja que en tu trabajo real.👩🏻‍🌾
       </h2>
 
-      <section class="seccion-info">
-        <div class="imagen-lateral">
+      <section class="seccion-visual-principal">
+        <div class="contenedor-imagen-grande">
           <img
             src="imagenes/stardew-valley-1920-x-1080-background-m8ab866rcwsuisuk.jpg"
-            alt="Granja"
+            alt="Granja Stardew Valley"
           />
         </div>
-        <div class="texto-info">
+        <div class="texto-info-centrado">
           <h3>¿Qué es Stardew Valley?</h3>
           <p>
             Es un simulador de vida en el campo donde heredas la vieja granja de
@@ -269,10 +40,55 @@
         </div>
       </section>
 
+      <section class="guia-granjero">
+        <h2 class="titulo-seccion">📚 Guía del Granjero Novato</h2>
+        <div class="bloques-guia">
+          <article class="tarjeta-guia">
+            <h3>🌤️ Las 4 Estaciones</h3>
+            <p>El tiempo en el Valle se divide en meses de 28 días:</p>
+            <ul>
+              <li>
+                <img src="imagenes/chirivia.png" alt="chirivia" />
+                <strong>Primavera:</strong> Temporada de la Chirivía.
+              </li>
+              <li>
+                <img src="imagenes/Melon.png" alt="melon" />
+                <strong>Verano:</strong> Época de Arándanos y Melones.
+              </li>
+              <li>
+                <img src="imagenes/Pumpkin.png" alt="calabaza" />
+                <strong>Otoño:</strong> Cosecha de grandes Calabazas.
+              </li>
+              <li>
+                <img src="imagenes/Crystal_Fruit.png" alt="fruta-invierno" />
+                <strong>Invierno:</strong> Solo semillas silvestres o
+                invernadero.
+              </li>
+            </ul>
+          </article>
+          <article class="tarjeta-guia">
+            <h3>⛏️ Actividades Diarias</h3>
+            <p>Hay mucho más que solo agricultura:</p>
+            <ul>
+              <li>
+                <img src="imagenes/pesca.png" alt="pesca" />
+                <strong>La Pesca:</strong> Atrapa peces en el río o mar.
+              </li>
+              <li>
+                <img src="imagenes/pico.png" alt="pico" />
+                <strong>Las Minas:</strong> Busca minerales y combate.
+              </li>
+              <li>
+                <img src="imagenes/social.png" alt="social" />
+                <strong>Socializar:</strong> ¡A todos les gustan las flores!
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
       <hr class="separador" />
-
       <h2 class="titulo-personajes">Habitantes del Pueblo Pelícano</h2>
-
       <div class="contenedor-personajes">
         <div class="tarjeta">
           <img src="imagenes/120px-Abigail_Blush.png" />
@@ -399,26 +215,24 @@
           <p>Willy</p>
         </div>
       </div>
-      <hr class="separador" />
 
+      <hr class="separador" />
       <footer class="pie-de-pagina">
         <div class="mi-perfil">
-          <img src="imagenes/Eileen.png" alt="Mi avatar" />
+          <img src="imagenes/Eileen.png" alt="Mi avatar" class="avatar-autor" />
           <p>
             Blog creado con 💜 por
             <a href="https://github.com/Eileenax" target="_blank">Eileenax</a>
           </p>
         </div>
-
         <div class="wiki-info">
           <p>¿Quieres saber más sobre Stardew Valley?</p>
           <a
             href="https://es.stardewvalleywiki.com/Stardew_Valley_Wiki"
             target="_blank"
             class="boton-wiki"
+            >Visitar la Wiki Oficial</a
           >
-            Visitar la Wiki Oficial de Stardew Valley
-          </a>
         </div>
       </footer>
     </div>
