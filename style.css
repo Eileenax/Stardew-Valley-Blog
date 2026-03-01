@@ -6,7 +6,7 @@
 
 body,
 html {
-  background-image: url("imagenes/wp6659276-stardew-valley-desktop-wallpapers.jpg");
+  background-image: url("imagenes/wallpaperflare.com_wallpaper (1).jpg");
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
@@ -28,6 +28,7 @@ html {
   border: 6px double #8b5e3c;
   color: #5c2d1b;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  overflow-x: hidden;
 }
 
 h1 {
@@ -46,13 +47,37 @@ h1 {
   text-align: center;
 }
 
+.seccion-visual-principal {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
 .contenedor-imagen-grande img {
-  width: 90%;
+  display: block;
+  margin: 20px auto;
+  width: 100%;
   max-width: 950px;
   border: 6px solid #8b5e3c;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  margin: 20px 0;
+}
+
+.texto-info-centrado {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.texto-info-centrado h3 {
+  color: #b35900;
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.texto-info-centrado p {
+  font-size: 28px;
+  margin-bottom: 10px;
 }
 
 .bloques-guia {
@@ -69,7 +94,8 @@ h1 {
   padding: 25px;
   border-radius: 12px;
   flex: 1;
-  min-width: 320px;
+  min-width: 300px;
+  max-width: 100%;
 }
 
 .tarjeta-guia h3 {
@@ -99,6 +125,7 @@ h1 {
   justify-content: center;
   gap: 20px;
   padding: 20px;
+  width: 100%;
 }
 
 .tarjeta {
@@ -111,13 +138,10 @@ h1 {
   transition: transform 0.3s;
 }
 
-.tarjeta:hover {
-  transform: scale(1.1);
-  background-color: #fff1ad;
-}
-
 .tarjeta img {
-  width: 100px;
+  width: 100%;
+  max-width: 100px;
+  height: auto;
   image-rendering: pixelated;
 }
 
@@ -132,11 +156,6 @@ h1 {
   transition: 0.3s;
 }
 
-.boton-wiki:hover {
-  background-color: #b35900;
-  transform: translateY(-5px);
-}
-
 .separador {
   border: 0;
   height: 4px;
@@ -146,19 +165,17 @@ h1 {
 }
 
 .pie-de-pagina {
-  margin-top: 50px;
-  text-align: center;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .mi-perfil {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 15px;
   margin-bottom: 30px;
 }
@@ -170,21 +187,12 @@ h1 {
   border: 4px solid #8b5e3c;
   object-fit: cover;
   image-rendering: pixelated;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.wiki-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
 }
 
 @media (max-width: 768px) {
   .div-container {
     width: 95%;
     padding: 15px;
-    margin: 10px auto;
   }
 
   h1 {
@@ -195,17 +203,17 @@ h1 {
     font-size: 24px;
   }
 
-  .contenedor-imagen-grande img {
-    width: 100%;
+  .texto-info-centrado h3 {
+    font-size: 32px;
   }
 
-  .bloques-guia {
-    flex-direction: column;
+  .texto-info-centrado p {
+    font-size: 20px;
   }
 
   .tarjeta-guia {
     min-width: 100%;
-    padding: 15px;
+    margin-bottom: 20px;
   }
 
   .tarjeta-guia h3 {
@@ -216,30 +224,8 @@ h1 {
     font-size: 22px;
   }
 
-  .contenedor-personajes {
-    gap: 10px;
-  }
-
   .tarjeta {
-    width: 110px;
-    padding: 10px;
-  }
-
-  .tarjeta img {
-    width: 70px;
-  }
-
-  .tarjeta p {
-    font-size: 18px;
-  }
-
-  .boton-wiki {
-    padding: 10px 20px;
-    font-size: 20px;
-  }
-
-  .avatar-autor {
-    width: 100px;
-    height: 100px;
+    width: 45%;
+    min-width: 130px;
   }
 }
