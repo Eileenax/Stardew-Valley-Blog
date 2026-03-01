@@ -1,0 +1,56 @@
+<!doctype html>
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz: Pareja Ideal - Stardew Valley por Eileen Valera</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles-quiz.css" />
+    <link rel="icon" type="image/png" href="imagenes/256x256.png" />
+  </head>
+  <body>
+    <nav style="margin-bottom: 20px">
+      <a href="index.html" class="btn-accion">← Volver al Blog</a>
+    </nav>
+    <div class="div-container">
+      <div id="pantalla-inicio">
+        <h1>¿QUIÉN ES TU PAREJA IDEAL?</h1>
+        <p>
+          En Stardew Valley puedes casarte con algunos vecinos del Pueblo
+          Pelícano. ¡Descubre quién sería tu alma gemela haciendo este divertido
+          quiz! 😍❤️
+        </p>
+        <button class="quiz-boton" id="btn-comenzar" style="margin-top: 20px">
+          EMPEZAR QUIZ
+        </button>
+      </div>
+
+      <div id="contenedor-pregunta" style="display: none">
+        <h2 id="pregunta-titulo">Cargando pregunta...</h2>
+        <div id="opciones-contenedor"></div>
+      </div>
+
+      <section id="pantalla-resultado" style="display: none">
+        <h2 id="mensaje-resultado">¡Tu pareja ideal es...!</h2>
+        <div class="tarjeta-resultado">
+          <img id="foto-ganador" src="" alt="Pareja ideal" />
+          <h3 id="nombre-ganador" style="font-size: 40px; color: #b35900">
+            Nombre
+          </h3>
+          <p id="descripcion-ganador" style="font-size: 24px; color: #5c2d1b">
+            Descripción...
+          </p>
+        </div>
+        <button onclick="location.reload()" class="quiz-boton">
+          Hacer de nuevo
+        </button>
+      </section>
+    </div>
+
+    <script src="quiz-logic.js"></script>
+  </body>
+</html>

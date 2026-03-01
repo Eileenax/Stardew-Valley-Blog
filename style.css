@@ -27,7 +27,6 @@ html {
   background-color: rgba(244, 236, 228, 0.95);
   border: 6px double #8b5e3c;
   color: #5c2d1b;
-  min-height: 100vh;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
 }
 
@@ -47,12 +46,6 @@ h1 {
   text-align: center;
 }
 
-.seccion-visual-principal {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
 .contenedor-imagen-grande img {
   width: 90%;
   max-width: 950px;
@@ -62,35 +55,12 @@ h1 {
   margin: 20px 0;
 }
 
-.texto-info-centrado {
-  max-width: 900px;
-  margin: 0 auto;
-  font-size: 28px;
-}
-
-.texto-info-centrado h3 {
-  color: #b35900;
-  font-size: 45px;
-  margin-bottom: 15px;
-}
-
-.guia-granjero {
-  width: 100%;
-  margin: 40px 0;
-}
-
-.titulo-seccion {
-  color: #b35900;
-  font-size: 50px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
 .bloques-guia {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
+  width: 100%;
 }
 
 .tarjeta-guia {
@@ -103,10 +73,10 @@ h1 {
 }
 
 .tarjeta-guia h3 {
-  color: #5c2d1b;
   font-size: 38px;
-  margin-bottom: 20px;
+  color: #5c2d1b;
   border-bottom: 2px solid #8b5e3c;
+  margin-bottom: 20px;
 }
 
 .tarjeta-guia ul li {
@@ -121,21 +91,6 @@ h1 {
   height: 45px;
   margin-right: 15px;
   image-rendering: pixelated;
-}
-
-.separador {
-  border: 0;
-  height: 4px;
-  background: #8b5e3c;
-  margin: 50px auto;
-  width: 95%;
-}
-
-.titulo-personajes {
-  color: #b35900;
-  font-size: 55px;
-  margin-bottom: 30px;
-  text-align: center;
 }
 
 .contenedor-personajes {
@@ -166,23 +121,6 @@ h1 {
   image-rendering: pixelated;
 }
 
-.tarjeta p {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.pie-de-pagina {
-  margin-top: 50px;
-  text-align: center;
-}
-
-.avatar-autor {
-  width: 100px;
-  border-radius: 50%;
-  border: 3px solid #8b5e3c;
-  image-rendering: pixelated;
-}
-
 .boton-wiki {
   display: inline-block;
   background-color: #5c2d1b;
@@ -199,15 +137,109 @@ h1 {
   transform: translateY(-5px);
 }
 
+.separador {
+  border: 0;
+  height: 4px;
+  background: #8b5e3c;
+  margin: 50px auto;
+  width: 95%;
+}
+
+.pie-de-pagina {
+  margin-top: 50px;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mi-perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.avatar-autor {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #8b5e3c;
+  object-fit: cover;
+  image-rendering: pixelated;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.wiki-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
 @media (max-width: 768px) {
   .div-container {
     width: 95%;
-    padding: 20px;
+    padding: 15px;
+    margin: 10px auto;
   }
+
   h1 {
-    font-size: 50px;
+    font-size: 45px;
   }
+
+  .subtitulo {
+    font-size: 24px;
+  }
+
+  .contenedor-imagen-grande img {
+    width: 100%;
+  }
+
+  .bloques-guia {
+    flex-direction: column;
+  }
+
   .tarjeta-guia {
     min-width: 100%;
+    padding: 15px;
+  }
+
+  .tarjeta-guia h3 {
+    font-size: 30px;
+  }
+
+  .tarjeta-guia ul li {
+    font-size: 22px;
+  }
+
+  .contenedor-personajes {
+    gap: 10px;
+  }
+
+  .tarjeta {
+    width: 110px;
+    padding: 10px;
+  }
+
+  .tarjeta img {
+    width: 70px;
+  }
+
+  .tarjeta p {
+    font-size: 18px;
+  }
+
+  .boton-wiki {
+    padding: 10px 20px;
+    font-size: 20px;
+  }
+
+  .avatar-autor {
+    width: 100px;
+    height: 100px;
   }
 }

@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  background-image: url("./imagenes/wallpaperflare.com_wallpaper.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  min-height: 100vh;
+  font-family: "VT323", monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+/* --- ESTILO BASE (PARA COMPUTADORA) --- */
+
+.div-container {
+  background-color: rgba(244, 236, 228, 0.9);
+  border: 8px double #8b5e3c;
+  width: 95%;
+  max-width: 650px;
+  padding: 40px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  border-radius: 4px;
+}
+
+h1 {
+  font-size: 60px; /* Tamaño grande para PC */
+  color: #b35900;
+  text-shadow: 3px 3px 0px #f7c18e;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 26px; /* Tamaño grande para PC */
+  color: #5c2d1b;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 34px;
+  color: #5c2d1b;
+  margin-bottom: 25px;
+}
+
+.quiz-boton {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 15px;
+  font-family: "VT323", monospace;
+  font-size: 28px;
+  cursor: pointer;
+  background-color: #e9c29d;
+  color: #5c2d1b;
+  border: 4px solid #8b5e3c;
+  border-style: double;
+  transition: all 0.1s ease;
+}
+
+/* --- MEDIA QUERIES (PARA CELULARES) --- */
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 40px; /* Reducimos el título en móviles */
+  }
+
+  p {
+    font-size: 20px; /* Reducimos el párrafo en móviles */
+  }
+
+  h2 {
+    font-size: 26px; /* Reducimos la pregunta en móviles */
+  }
+
+  .quiz-boton {
+    font-size: 22px; /* Reducimos el texto de los botones */
+    padding: 12px;
+  }
+
+  .div-container {
+    padding: 20px; /* Menos margen interno en pantallas pequeñas */
+  }
+}
+
+/* --- ESTILOS DE RESULTADO Y BOTONES EXTRAS --- */
+
+.tarjeta-resultado {
+  background-color: rgba(139, 69, 19, 0.1);
+  border: 3px dashed #8b5e3c;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+#foto-ganador {
+  width: 140px;
+  image-rendering: pixelated;
+  border: 4px solid #8b5e3c;
+  background: #fff;
+}
+
+.btn-accion {
+  display: inline-block;
+  background-color: #5c2d1b;
+  color: #f7c18e !important;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 4px;
+}
